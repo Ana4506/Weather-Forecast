@@ -18,4 +18,4 @@ For your reference and better understanding I have also attached the output snip
    Have any feedback, any suggestions? Or just want to connect?
    Head over to my [LinkedIn](https://linkedin.com/in/ananya-gupta-497ab7229) or [Github profile](https://github.com/Ana4506)
 
-<img src="(https://github.com/Ana4506/Weather-Forecast/assets/89125989/0f66abab-a501-48b7-91fd-22fe5cd7b27b)" width="100" height="70">
+<img src="![a_weather_forec_0-removebg-preview](https://github.com/Ana4506/Weather-Forecast/assets/89125989/6c20e6bf-58c2-43b6-a023-cb662fed87cf)" width="100" height="70">
