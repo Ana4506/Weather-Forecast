@@ -1,4 +1,6 @@
 # Weather-Forecast
+![weather](https://github.com/Ana4506/Weather-Forecast/assets/89125989/606e9a81-4a56-4b68-a409-45cdf582859b)
+
 
 This command-line tool allows users to retrieve the weather forecast for a specific city using the OpenWeatherMap API. It provides current temperature and humidity data and displays a graph representing the forecast for the upcoming days.
 
