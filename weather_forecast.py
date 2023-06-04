@@ -11,10 +11,12 @@ API_KEY = 'f2ad09d76813a13c98e255db540b6dcf'
 def process_query(query):
     city = query
 
-    url = f'http://api.openweathermap.org/data/2.5/forecast?q={city}&appid={API_KEY}&units=metric'
-    response = requests.get(url)
+    # Constructing the API request URL using f-string suggested by GitHub Copilot
+    url = f'http://api.openweathermap.org/data/2.5/forecast?q={city}&appid={API_KEY}&units=metric' 
+    response = requests.get(url) #GitHub Copilot has suggested using the requests.get() method to make the API request.
 
     if response.status_code == 200:
+        # Copilot has suggested accessing nested fields in the JSON dictionary, such as data['list'] or day['main']['temp'], to extract the required temperature and humidity values.
         data = response.json()
         forecast = data['list']
 
@@ -23,6 +25,7 @@ def process_query(query):
         humidities = []
 
         for day in forecast:
+            # Copilot suggested using the strptime method from the datetime module to parse the date from the dt_txt string.
             date = datetime.datetime.strptime(day['dt_txt'], '%Y-%m-%d %H:%M:%S').date()
             if date not in dates:
                 dates.append(date)
@@ -31,7 +34,6 @@ def process_query(query):
                 humidity = day['main']['humidity']
                 humidities.append(humidity)
 
-        # Set dark theme with darkest blue background
         plt.style.use('dark_background')
         plt.rcParams['axes.facecolor'] = '#000033'
 
@@ -61,6 +63,7 @@ def process_query(query):
         # Display the graph
         plt.show()
 
+        # Display the table
         click.echo()
         click.secho(f'Weather Forecast for {city}', bold=True)
         click.echo(f'-' * 45)
@@ -78,6 +81,7 @@ def process_query(query):
         click.secho('Enjoy your week!', fg='green', bold=True)
         click.echo('🌍  Stay connected with the world through the weather!')
 
+    # Error retrieval used by taking help from GitHub Copilot
     else:
         click.echo('Error retrieving weather information. Please check the city name provided.')
 
